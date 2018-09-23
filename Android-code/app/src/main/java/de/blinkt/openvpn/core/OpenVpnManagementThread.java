@@ -14,8 +14,8 @@ import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.vasilkoff.easyvpnfree.BuildConfig;
-import com.vasilkoff.easyvpnfree.R;
+import com.pirate.easyvpnfree.BuildConfig;
+import com.pirate.easyvpnfree.R;
 
 import junit.framework.Assert;
 

@@ -10,7 +10,7 @@ import android.content.res.Resources;
 import android.text.TextUtils;
 
 
-import com.vasilkoff.easyvpnfree.R;
+import com.pirate.easyvpnfree.R;
 
 import de.blinkt.openvpn.VpnProfile;
 import org.spongycastle.util.io.pem.PemObject;

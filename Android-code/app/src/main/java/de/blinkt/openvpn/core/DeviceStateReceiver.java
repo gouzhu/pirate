@@ -16,7 +16,7 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 
 
-import com.vasilkoff.easyvpnfree.R;
+import com.pirate.easyvpnfree.R;
 
 import de.blinkt.openvpn.core.VpnStatus.ByteCountListener;
 

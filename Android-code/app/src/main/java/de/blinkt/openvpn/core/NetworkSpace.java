@@ -9,7 +9,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.vasilkoff.easyvpnfree.BuildConfig;
+import com.pirate.easyvpnfree.BuildConfig;
 
 import junit.framework.Assert;
 

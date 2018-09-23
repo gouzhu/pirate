@@ -14,7 +14,7 @@ import org.acra.annotation.ReportsCrashes;
 
 
 
-import com.vasilkoff.easyvpnfree.BuildConfig;
+import com.pirate.easyvpnfree.BuildConfig;
 
 import de.blinkt.openvpn.core.PRNGFixes;
 

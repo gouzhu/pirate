@@ -15,7 +15,7 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.vasilkoff.easyvpnfree.R;
+import com.pirate.easyvpnfree.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

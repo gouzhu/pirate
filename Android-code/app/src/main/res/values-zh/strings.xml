@@ -1,21 +1,60 @@
 <resources>
-      <string name="home_btn_choose_country">选择您所在的国家</string>
-      <string name="home_pop_up_title_choose_country">选择您所在的国家</string>
-      <string name="server_btn_connect">连接</string>
-      <string name="server_btn_disconnect">断开连接</string>
-      <string name="server_txt_ping">表：</string>
-      <string name="server_txt_sessions">会话：</string>
-      <string name="server_txt_speed">速度：</string>
-      <string name="server_error_loading_profile">无法加载个人资料</string>
-      <string name="server_txt_status">连接状态：</string>
-      <string name="server_list_more">详细信息</string>
-      <string name="mbps"> Mbps</string>
-      <string name="ms">毫秒</string>
-      <string name="loading_text">加载...</string>
-      <string name="downloading_csv_text">加载服务器列表...</string>
-      <string name="parsing_csv_text">解析服务器的列表...</string>
-      <string name="csv_file_error">伴读文件的问题...</string>
-      <string name="csv_file_error_parsing">与解析文件的问题...</string>
-      <string name="network_error">网络错误...</string>
-      <string name="successfully_loaded">下载完成...</string>
+        
+    <string name="home_btn_choose_country">选择您所在的国家</string>
+        
+    <string name="home_pop_up_title_choose_country">选择您所在的国家</string>
+        
+    <string name="server_btn_connect">连接</string>
+        
+    <string name="server_btn_disconnect">断开连接</string>
+        
+    <string name="server_txt_ping">表：</string>
+        
+    <string name="server_txt_sessions">会话：</string>
+        
+    <string name="server_txt_speed">速度：</string>
+        
+    <string name="server_error_loading_profile">无法加载个人资料</string>
+        
+    <string name="server_txt_status">连接状态：</string>
+        
+    <string name="server_list_more">详细信息</string>
+        
+    <string name="mbps"> Mbps</string>
+        
+    <string name="ms">毫秒</string>
+        
+    <string name="loading_text">加载...</string>
+        
+    <string name="downloading_csv_text">加载服务器列表...</string>
+        
+    <string name="parsing_csv_text">解析服务器的列表...</string>
+        
+    <string name="csv_file_error">伴读文件的问题...</string>
+        
+    <string name="csv_file_error_parsing">与解析文件的问题...</string>
+        
+    <string name="network_error">网络错误...</string>
+        
+    <string name="successfully_loaded">下载完成...</string>
+    <string name="more_servers">获取更多服务</string>
+    <string name="action_about">推荐应用</string>
+    <string name="action_settings">设置</string>
+    <string name="bookmarks">书签</string>
+    <string name="unblock">广告过滤中</string>
+    <string name="random_connection">快速连接</string>
+    <string name="total_servers">现在有%1$d服务可用</string>
+    <string name="success_pop_up_title">你已经连接成功</string>
+    <string name="what_is_my_ip">点击查看我的ip地址ß</string>
+    <string name="automatic_switching">自动切换</string>
+    <string name="automatic_switching_category">自动切换</string>
+    <string name="automatic_switching_set_seconds">设定秒数</string>
+    <string name="automatic_switching_summary">如果连接不顺利，几秒钟自动切换到其他国家或地区的服务器</string>
+    <string name="choose_country_priority_category">选择优先的国家</string>
+    <string name="connect_on_start_category">自启动</string>
+    <string name="choose_country_priority">选择优先的国家</string>
+    <string name="choose_country_priority_summary">如果关闭则随机连接</string>
+    <string name="connect_on_start">启动就连接</string>
+    <string name="connect_on_start_summary">当应用启动就开始连</string>
+    <string name="choose_country">选择国家</string>
 </resources>

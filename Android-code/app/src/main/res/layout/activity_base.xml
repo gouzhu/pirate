@@ -16,8 +16,7 @@
             android:background="@color/toolbarBg"
             app:titleTextColor="@color/toolbarTitle"
             app:titleMarginStart="20dp"
-            app:contentInsetStart="10dp"
-            app:logo="@drawable/ic_app_small"/>
+            app:contentInsetStart="10dp"/>
 
         <FrameLayout
             android:id="@+id/activity_content"

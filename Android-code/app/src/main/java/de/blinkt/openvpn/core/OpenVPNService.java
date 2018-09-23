@@ -33,12 +33,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.vasilkoff.easyvpnfree.BuildConfig;
+import com.pirate.easyvpnfree.BuildConfig;
 
 
-import com.vasilkoff.easyvpnfree.R;
-import com.vasilkoff.easyvpnfree.activity.ServerActivity;
-import com.vasilkoff.easyvpnfree.util.TotalTraffic;
+import com.pirate.easyvpnfree.R;
+import com.pirate.easyvpnfree.activity.ServerActivity;
+import com.pirate.easyvpnfree.util.TotalTraffic;
 
 
 import java.io.IOException;

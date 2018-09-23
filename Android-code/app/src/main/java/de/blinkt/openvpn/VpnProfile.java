@@ -20,7 +20,7 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.vasilkoff.easyvpnfree.R;
+import com.pirate.easyvpnfree.R;
 
 import org.spongycastle.util.io.pem.PemObject;
 import org.spongycastle.util.io.pem.PemWriter;
