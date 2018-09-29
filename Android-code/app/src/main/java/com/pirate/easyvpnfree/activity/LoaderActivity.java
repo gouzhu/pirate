@@ -17,6 +17,8 @@ import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.CustomEvent;
 import com.daimajia.numberprogressbar.NumberProgressBar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.pirate.easyvpnfree.BuildConfig;
 import com.pirate.easyvpnfree.R;
 import com.pirate.easyvpnfree.model.Server;
@@ -52,11 +54,33 @@ public class LoaderActivity extends BaseActivity {
 
     private int percentDownload = 0;
     private Stopwatch stopwatch;
+    private AdView mAdView1;
+    private AdView mAdView2;
+    private AdView mAdView3;
+    private AdView mAdView4;
+    private AdView mAdView5;
+    private AdView mAdView6;
+    private AdView mAdView7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loader);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView1 = (AdView)findViewById(R.id.adView1);
+        mAdView2 = (AdView)findViewById(R.id.adView2);
+        mAdView3 = (AdView)findViewById(R.id.adView3);
+        mAdView4 = (AdView)findViewById(R.id.adView4);
+        mAdView5 = (AdView)findViewById(R.id.adView5);
+        mAdView6 = (AdView)findViewById(R.id.adView6);
+        mAdView7 = (AdView)findViewById(R.id.adView7);
+        mAdView1.loadAd(adRequest);
+        mAdView2.loadAd(adRequest);
+        mAdView3.loadAd(adRequest);
+        mAdView4.loadAd(adRequest);
+        mAdView5.loadAd(adRequest);
+        mAdView6.loadAd(adRequest);
+        mAdView7.loadAd(adRequest);
 
         progressBar = (NumberProgressBar)findViewById(R.id.number_progress_bar);
         commentsText = (TextView)findViewById(R.id.commentsText);

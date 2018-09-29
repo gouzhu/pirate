@@ -25,6 +25,7 @@
     <string name="ms">毫秒</string>
         
     <string name="loading_text">加载...</string>
+    <string name="forgiveme">软件是免费的，所以体谅我们的广告，后续推出vip服务</string>
         
     <string name="downloading_csv_text">加载服务器列表...</string>
         
@@ -57,4 +58,8 @@
     <string name="connect_on_start">启动就连接</string>
     <string name="connect_on_start_summary">当应用启动就开始连</string>
     <string name="choose_country">选择国家</string>
+    <string name="action_current_connection">当前连接</string>
+    <string name="share_text">
+        最新版本从github地址下载：xxxx
+    </string>
 </resources>

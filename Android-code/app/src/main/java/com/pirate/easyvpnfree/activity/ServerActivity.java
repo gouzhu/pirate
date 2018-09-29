@@ -291,7 +291,7 @@ public class ServerActivity extends BaseActivity {
             unblockCheck.setVisibility(View.GONE);
         } else {
             adbBlockCheck.setVisibility(View.GONE);
-            unblockCheck.setVisibility(View.VISIBLE);
+            unblockCheck.setVisibility(View.GONE);
         }
 
     }
@@ -329,7 +329,7 @@ public class ServerActivity extends BaseActivity {
                         PropertiesService.setShowRating(false);
                         showRating();
                     } else {
-                        chooseAction();
+//                        chooseAction();
                     }
                 }
 
