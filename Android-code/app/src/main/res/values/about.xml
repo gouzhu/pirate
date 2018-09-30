@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="aboutApp">
-        推荐应用显示
-    </string>
+    <string name="aboutApp">app下载地址（最新版更新）</string>
+    <string name="downloadAddress">https://github.com/wendaozoubei/app-</string>
+    <string name="copyAddress">点击复制，然后浏览器粘贴打开</string>
+    <string name="pornApp">宅男福利app，点击图片，然后打开浏览器粘贴地址，即可下载，福利app需要翻墙</string>
+    <string name="pornAppDownloadAddress">https://github.com/wendaozoubei/app-/blob/master/%E8%BA%B2%E8%A2%AB%E7%AA%9D.apk?raw=true</string>
 </resources>

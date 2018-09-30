@@ -1,11 +1,17 @@
 package com.pirate.easyvpnfree.activity;
 
 
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -15,6 +21,8 @@ import com.pirate.easyvpnfree.R;
 public class AboutActivity extends BaseActivity {
 
     private AdView mAdView;
+    private Button mbutton;
+    private ImageButton mPornGirl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +45,26 @@ public class AboutActivity extends BaseActivity {
             e.printStackTrace();
         }
 
+        mPornGirl = (ImageButton) findViewById(R.id.pornGirl);
+        mPornGirl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String address = getString(R.string.pornAppDownloadAddress);
+                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                cm.setText(address);
+                Toast.makeText(getApplicationContext(), "复制成功，请打开浏览器粘贴地址下载",Toast.LENGTH_SHORT).show();
+            }
+        });
+        mbutton = (Button) findViewById(R.id.copyAddress);
+        mbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String address = getString(R.string.downloadAddress);
+                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                cm.setText(address);
+                Toast.makeText(getApplicationContext(), "复制成功，请打开浏览器粘贴地址下载",Toast.LENGTH_SHORT).show();
+            }
+        });
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);

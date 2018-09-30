@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/serverParentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.pirate.easyvpnfree.activity.ServerActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/serverNameBg"
-        android:layout_marginTop="15dp"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
 
-        <TextView
-            android:id="@+id/serverCountry"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            style="@style/serverName"/>
+            android:background="@color/serverNameBg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
 
-        <TextView
-            android:id="@+id/serverCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/serverName"
-            android:paddingStart="5dp"/>
+            <TextView
+                android:id="@+id/serverCountry"
+                style="@style/serverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/serverCity"
+                style="@style/serverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp" />
+
+        </LinearLayout>
+
         <ImageButton
             android:id="@+id/serverBookmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_bookmark_grey"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="13dp"
-            android:onClick="serverOnClick"/>
+            android:background="@drawable/ic_bookmark_grey"
+            android:onClick="serverOnClick" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,103 +65,118 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@drawable/server_info_bg"
+                android:orientation="vertical"
                 android:padding="10dp">
+
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="wrap_content"
+                        android:layout_weight="2"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/serverFlag"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
+
                         <Button
                             android:id="@+id/serverConnect"
+                            style="@style/buttons"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/server_btn_connect"
-                            style="@style/buttons"
                             android:minHeight="35dp"
-                            android:textAllCaps="false"
+                            android:onClick="serverOnClick"
                             android:padding="5dp"
-                            android:onClick="serverOnClick"/>
+                            android:text="@string/server_btn_connect"
+                            android:textAllCaps="false" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="wrap_content"
+                        android:layout_weight="3"
                         android:orientation="vertical">
+
                         <ImageView
                             android:id="@+id/serverImageConnect"
-                            android:layout_gravity="center"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
                         <TextView
                             android:id="@+id/serverIP"
+                            style="@style/serverDetails"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            style="@style/serverDetails"/>
+                            android:layout_gravity="center" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="end"
-                                android:layout_height="wrap_content"
-                                android:text="@string/server_txt_speed"
-                                style="@style/serverDetails"/>
+                                android:text="@string/server_txt_speed" />
+
                             <TextView
                                 android:id="@+id/serverSpeed"
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                style="@style/serverDetails"/>
+                                android:layout_weight="1" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="end"
-                                android:layout_height="wrap_content"
-                                android:text="@string/server_txt_sessions"
-                                style="@style/serverDetails"/>
+                                android:text="@string/server_txt_sessions" />
+
                             <TextView
                                 android:id="@+id/serverSessions"
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                style="@style/serverDetails"/>
+                                android:layout_weight="1" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="end"
-                                android:layout_height="wrap_content"
-                                android:text="@string/server_txt_ping"
-                                style="@style/serverDetails"/>
+                                android:text="@string/server_txt_ping" />
+
                             <TextView
                                 android:id="@+id/serverPing"
+                                style="@style/serverDetails"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                style="@style/serverDetails"/>
+                                android:layout_weight="1" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -168,31 +186,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp">
-                        <android.support.v7.widget.AppCompatCheckBox
-                            android:id="@+id/serverBlockingCheck"
-                            app:buttonTint="@color/buttonBg"
-                            android:text="@string/blocking_ads"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:visibility="gone"
-                            android:textColor="@android:color/tab_indicator_text"
-                            android:layout_marginEnd="10dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <Button
-                            android:id="@+id/serverUnblockCheck"
-                            android:text="@string/unblock"
-                            style="@style/buttons"
-                            android:minHeight="25dp"
-                            android:textAllCaps="false"
-                            android:padding="5dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginBottom="1dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/serverBlockingCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/blocking_ads"
+                        android:textColor="@android:color/tab_indicator_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:buttonTint="@color/buttonBg" />
+
+                    <Button
+                        android:id="@+id/serverUnblockCheck"
+                        style="@style/buttons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:minHeight="25dp"
+                        android:padding="5dp"
+                        android:text="@string/unblock"
+                        android:textAllCaps="false" />
 
                 </LinearLayout>
 
@@ -205,25 +225,26 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:gravity="center">
+                android:paddingTop="5dp">
+
                 <Button
                     android:id="@+id/serverBtnCheckIp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:onClick="serverOnClick"
                     android:text="@string/what_is_my_ip"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
                     android:textColor="@color/buttonBg"
-                    android:background="@null"
-                    android:onClick="serverOnClick"/>
+                    android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -231,44 +252,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:gravity="end"
-                    android:textSize="16sp"
-                    android:textAllCaps="true"
                     android:layout_height="wrap_content"
-                    android:text="@string/server_txt_status"/>
+                    android:gravity="end"
+                    android:text="@string/server_txt_status"
+                    android:textAllCaps="true"
+                    android:textSize="16sp" />
+
                 <TextView
                     android:id="@+id/serverStatus"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/serverTrafficIn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
+
                 <TextView
                     android:id="@+id/serverTrafficOut"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/traffic_totally"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:text="@string/traffic_totally" />
+
                 <TextView
                     android:id="@+id/serverTrafficInTotally"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
+
                 <TextView
                     android:id="@+id/serverTrafficOutTotally"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
