@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,8 +20,7 @@ import com.pirate.easyvpnfree.util.NetworkState;
 
 public class LauncherActivity extends Activity {
     private static boolean loadStatus = false;
-    //显示广告页面的时间，5 秒
-    private long showTime = 5;
+    private long showTime = 0;
     private InterstitialAd mInterstitialAd;
 
     @Override
@@ -30,28 +30,19 @@ public class LauncherActivity extends Activity {
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3616281855076159/5656030177");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        }
-
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                // Load the next interstitial.
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-
-        });
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
                 // Code to be executed when an ad finishes loading.
+                Log.e("xxxxxxx", "onAdLoaded: " );
+                mInterstitialAd.show();
             }
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
                 // Code to be executed when an ad request fails.
+                Log.e("xxxxxxx", "onAdFailedToLoad: "+errorCode);
             }
 
             @Override
@@ -62,14 +53,18 @@ public class LauncherActivity extends Activity {
             @Override
             public void onAdLeftApplication() {
                 // Code to be executed when the user has left the app.
+                Log.e("xxxxxxx", "onAdLeftApplication: ");
             }
 
             @Override
             public void onAdClosed() {
                 // Code to be executed when when the interstitial ad is closed.
+                Log.e("xxxxxxx", "onAdClosed: " );
             }
         });
-
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
         //延迟5000ms跳转到主页面
         handler.postDelayed(myRunnable, showTime * 1000);
         handler.sendEmptyMessage(111);//給Handler对象发送信息
